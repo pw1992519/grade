@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>成绩管理系统</title>
+    <link rel="stylesheet" href="./css/studentIndex.css">
+</head>
+
+<body>
+
+    <!-- 左侧侧边栏 -->
+    <aside class="sidebar">
+        <h1>成绩管理系统</h1>
+        <ul>
+            <li ><a class="active" href="./studentIndex.html"> <img src="./img/s-score.png" />成绩查询</a></li>
+        </ul>
+    </aside>
+
+    <!-- 顶部布局 -->
+    <header class="header">
+        <div class="user-info">
+            <img id="headpic" src="" alt="User Avatar">
+            <span id="husername"></span>
+        </div>
+        <button id="logout" class="logout-btn">登出</button>
+    </header>
+
+    <!-- 中间部分 -->
+    <main class="content">
+        <div class="bread-box">
+            <h2>成绩查询</h2>
+        </div>
+
+        <div class="desc">
+            <span id="uname"></span> · <span id="ustuno"></span> · <span id="uclzz"></span>，您好！
+        </div>
+
+
+        <div class="form-container">
+            <div class="form-Box">
+                <div class="form-group">
+                    <label for="subjectId" class="label">学科:</label>
+                    <select class="input" id="subjectId">
+                     
+                    </select>
+                </div>
+
+                <button onclick="handleSearch()" class="btn-submit">立即查询</button>
+            </div>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>学生</th>
+                    <th>学科</th>
+                    <th>分数</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+        <div class="empty">
+            暂无数据~
+        </div>
+
+ 
+
+
+    </main>
+
+</body>
+
+</html>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/studentIndex.js"></script>

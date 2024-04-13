@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>成绩管理系统</title>
+    <link rel="stylesheet" href="./css/student.css">
+</head>
+
+<body>
+
+    <!-- 左侧侧边栏 -->
+    <aside class="sidebar">
+        <h1>成绩管理系统</h1>
+        <ul>
+            <li><a href="./student.html" class="active"> <img src="./img/student.png" />学生管理</a></li>
+            <li><a href="./subject.html"> <img class="book-icon" src="./img/subject.png" />学科管理</a></li>
+            <li><a href="./score.html"> <img class="book-icon" src="./img/score.png" />成绩管理</a></li>
+        </ul>
+    </aside>
+
+    <!-- 顶部布局 -->
+    <header class="header">
+        <div class="user-info">
+            <img id="headpic" src="" alt="User Avatar">
+            <span id="husername"></span>
+        </div>
+        <button id="logout" class="logout-btn">登出</button>
+    </header>
+
+    <!-- 中间部分 -->
+    <main class="content">
+        <div class="bread-box">
+            <h2>学生管理</h2>
+            <button onclick="handleAdd()" class="btn-edit">新增学生</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>学生用户名</th>
+                    <th>学生密码</th>
+                    <th>学号</th>
+                    <th>班级</th>
+                    <th>创建时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+        </table>
+        <div class="empty">
+            暂无数据~
+        </div>
+
+        <!-- 蒙版 -->
+        <div class="overlay" id="overlay">
+            <div class="form-container">
+                <h2 id="form-container-tit"></h2>
+                <div>
+                    <div class="form-group">
+                        <label for="username" class="label">用户名:</label>
+                        <input type="text" id="username" class="input" placeholder="请输入用户名">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pwd" class="label">密码:</label>
+                        <input type="text" id="pwd" class="input" placeholder="请输入密码">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="stuNo" class="label">学号:</label>
+                        <input type="text" id="stuNo" class="input" placeholder="请输入学号">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clzz" class="label">班级:</label>
+                        <input type="text" id="clzz" class="input" placeholder="请输入班级">
+                    </div>
+                 
+                    <button onclick="handleEnter()" class="btn-submit">提交</button>
+                    <button type="button" class="btn-close" onclick="closeOverlay()">关闭</button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/student.js"></script>

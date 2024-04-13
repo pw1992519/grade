@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>成绩管理系统 - 登录</title>
+</head>
+
+<body>
+    <div class="login-container">
+        <h1>成绩管理系统</h1>
+        <form id="loginForm">
+            <div style="text-align: center;">
+                <label for="admin">管理员</label>
+                <input checked style="margin-right: 20px;" required value="admin" type="radio" id="admin" name="role">
+                <label for="student">学生</label>
+                <input type="radio" id="student" name="role" required value="student">
+            </div>
+
+            <label for="username">用户名：</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">密码：</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">登录</button>
+        </form>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
